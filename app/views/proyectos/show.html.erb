@@ -1,0 +1,39 @@
+<%# app/views/proyectos/show.html.erb %>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @proyecto.nombre %>
+</p>
+
+<p>
+  <strong>Fecha entrega:</strong>
+  <%= @proyecto.fecha_entrega %>
+</p>
+
+<p>
+  <strong>Tareas:</strong>
+  <p>
+    <% @proyecto.tareas.each do |tarea| %>
+      Nombre: <%= tarea.nombre %><br/>
+      Prioridad: <%= tarea.prioridad %>
+      <hr/>
+    <% end %>
+  </p>
+</p>
+
+<%= link_to 'Edit', edit_proyecto_path(@proyecto) %> |
+<%= link_to 'Back', proyectos_path %><p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @proyecto.nombre %>
+</p>
+
+<p>
+  <strong>Fecha entrega:</strong>
+  <%= @proyecto.fecha_entrega %>
+</p>
+
+<%= link_to 'Edit', edit_proyecto_path(@proyecto) %> |
+<%= link_to 'Back', proyectos_path %>

@@ -1,0 +1,10 @@
+<%# app/views/proyectos/_tarea_fields.html.erb %>
+<div class="field">
+  <%= f.label :nombre, 'Nombre de la tarea' %><br>
+  <%= f.text_field :nombre %>
+</div>
+<div class="field">
+  <%= f.label :prioridad %><br>
+  <%= f.text_field :prioridad %>
+</div>
+<%= f.link_to_remove "Eliminar esta tarea" %>
